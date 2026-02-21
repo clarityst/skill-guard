@@ -1,0 +1,6 @@
+node_modules/
+.clawhub/
+skills/
+*.log
+.DS_Store
+.env
