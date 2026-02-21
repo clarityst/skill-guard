@@ -1,32 +1,15 @@
-\# skill-guard
-
-
+# skill-guard
 
 Safety gate for ClawHub skill updates (diff + risk heuristics).
 
+## What it does
+- Reads installed skills from `.clawhub/lock.json`
+- For each skill: fetches latest version, diffs files, runs simple risk heuristics
+- Blocks update if risk score is above threshold
 
+⚠️ Run `skill-guard` from (or point `--workdir` to) a ClawHub-managed project directory that contains `.clawhub/lock.json` (e.g. your OpenClaw project), not from the `skill-guard` repo itself.
 
-\## What it does
-
-\- Reads installed skills from `.clawhub/lock.json`
-
-\- Pulls the latest version metadata via `clawhub inspect`
-
-\- Installs the candidate version into a temp dir
-
-\- Computes file diff vs your local installed version
-
-\- Runs simple risk heuristics (exec/network hints, etc.)
-
-\- Blocks update if risk score exceeds threshold
-
-
-
-\## Install (local dev)
-
+## Install (dev)
 ```bash
-
 npm install
-
 npm link
-
