@@ -1,16 +1,22 @@
 {
   "name": "skill-guard",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "version": "1.0.1",
+  "description": "Safety gate for ClawHub skill updates (diff + risk heuristics).",
   "type": "module",
   "bin": { "skill-guard": "src/cli.js" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarityst/skill-guard.git"
+  },
+  "homepage": "https://github.com/clarityst/skill-guard#readme",
+  "bugs": { "url": "https://github.com/clarityst/skill-guard/issues" },
+  "keywords": ["security", "supply-chain", "cli", "nodejs", "openclaw", "clawhub"],
+  "author": "clarityst",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "format": "prettier -w ."
+  },
   "dependencies": {
     "commander": "^14.0.3",
     "fast-glob": "^3.3.3",
